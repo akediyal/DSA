@@ -8,8 +8,9 @@ public:
     int index = 0;
     for (int i = 0; i < first.size(); i++) {
       if (first[i] != last[i]) {
-        index = i;
+        break;
       }
+      index++;
     }
     return first.substr(0, index);
   }
