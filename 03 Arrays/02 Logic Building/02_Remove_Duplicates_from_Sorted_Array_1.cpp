@@ -6,7 +6,7 @@ public:
     set<int> unique_set;
 
     for (int i = 0; i < n; i++) {
-      unique.insert(nums[i]);
+      unique_set.insert(nums[i]);
     }
 
     int unique_elements = unique_set.size();
@@ -17,6 +17,6 @@ public:
       j++;
     }
 
-    return k;
+    return unique_elements;
   }
 };
