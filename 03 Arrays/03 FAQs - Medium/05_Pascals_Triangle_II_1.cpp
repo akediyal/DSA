@@ -1,7 +1,13 @@
 class Solution {
 public:
-  int pascalTriangleI(int r, int c) {
-    long long ans = nCr(r - 1, c - 1);
+  vector<int> pascalTriangleII(int r) {
+    vector<int> ans;
+
+    for (int i = 0; i < r; i++) {
+      long long num = nCr(r - 1, i);
+      ans.push_back(num);
+    }
+
     return ans;
   }
 
