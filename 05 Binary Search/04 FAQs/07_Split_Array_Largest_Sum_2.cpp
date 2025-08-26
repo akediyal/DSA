@@ -29,9 +29,15 @@ public:
     int low = *max_element(a.begin(), a.end());
     int high = accumulate(a.begin(), a.end(), 0);
 
-    for (int max_sum = low; max_sum <= high; max_sum++) {
-      if (countSubarrays(a, max_sum) <= k) {
-        return max_sum;
+    while (low <= high) {
+      int mid = low + (high - low) / 2;
+
+      int subarrays = countSubarrays(a, mid);
+
+      if (subarrays > k) {
+        low = mid + 1;
+      } else {
+        high = mid - 1;
       }
     }
 
