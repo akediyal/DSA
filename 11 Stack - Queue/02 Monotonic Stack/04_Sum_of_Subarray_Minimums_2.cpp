@@ -27,7 +27,7 @@ private:
     for (int i = 0; i < n; i++) {
       int cur_el = arr[i];
 
-      while (!st.empty() && arr[st.top()] > arr[i]) {
+      while (!st.empty() && arr[st.top()] > cur_el) {
         st.pop();
       }
 
@@ -46,7 +46,7 @@ public:
     int mod = 1e9 + 7;
     int sum = 0;
 
-    for (int = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
       int left = i - psee[i];
       int right = nse[i] - i;
       long long freq = left * right * 1LL;
